@@ -6,7 +6,14 @@
 *****
 *****
 '''
-
+raw = 1
+while raw <= 3:
+    col = 1
+    while col <= 5:
+        print("*", end="")
+        col += 1
+    print()
+    raw += 1
 
 
 # 打印下面图形，要求一次只能打印一个"*"
@@ -17,7 +24,14 @@
 ****
 *****
 '''
-
+raw = 1
+while raw <= 5:
+    col = 1
+    while col <= raw:
+        print("*", end="")
+        col += 1
+    print()
+    raw += 1
 
 
 
@@ -30,6 +44,22 @@
  *******     4     1           7
 *********    5     0           9
 '''
+raw = 1
+while raw <= 5:
+    # 同一行
+    # 空格
+    col = 1
+    while col <= 5 - raw:
+        print(" ", end = '')
+        col += 1
+    # *
+    col = 1
+    while col <= 2 * raw - 1:
+        print("*", end = '')
+        col += 1
+    # 换行输出下一行
+    print( )
+    raw += 1
 
 
 

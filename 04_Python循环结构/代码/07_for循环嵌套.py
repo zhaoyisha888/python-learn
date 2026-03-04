@@ -8,6 +8,10 @@
 *****
 *****
 '''
+for i in range(6):
+    for j in range(5):
+        print('*', end='')
+    print()
 
 
 
@@ -21,7 +25,10 @@
 *****
 ******
 '''
-
+for i in range(6):
+    for j in range(i+1):
+        print('*', end='')
+    print()
 
 
 
@@ -34,6 +41,10 @@
 12345
 123456
 '''
+for i in range(6):
+    for j in range(i+1):
+        print(j+1, end='')
+    print()
 
 
 
@@ -51,7 +62,10 @@
 '''
 # \n : 换行符
 # \t : 制表符 tab
-
+for i in range(1,10):
+    for j in range(1,i+1):
+        print(f'{j}*{i}={i*j}', end='\t')
+    print()
 
 
 
@@ -65,6 +79,18 @@
  *********    5     1           9
 ***********   6     0           11
 '''
-
+for i in range(1,7):    # 1，2，3，4，5，6
+    for j in range(6-i):
+        print(" ", end = '')
+    for j in range(2*i-1):
+        print("*", end = '')
+    print()
+# 7轮打印（错误），0轮次打印5+1个空格， range(2*0-1) ->  range(-1) 起始默认值0>结束值-1，打印结果为一个空格
+# for i in range(7):
+#     for j in range(6-i):
+#         print(" ", end = '')
+#     for j in range(2*i-1):
+#         print("*", end = '')
+#     print()
 
 
