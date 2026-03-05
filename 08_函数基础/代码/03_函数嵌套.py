@@ -1,8 +1,15 @@
 
 # 函数嵌套（难点）
+def func1(x):
+    print(f"func1函数里的 x : {x}")
 
+    def func2(y):
+        print(f"func2函数里的 y :{y}")
 
+    return func2
 
+result_str = func1(3)   # result_str = func2
+result_str(666)
 
 
 # 函数名称：既是函数名，也是指向该函数的变量（对象）
