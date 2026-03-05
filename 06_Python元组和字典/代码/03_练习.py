@@ -49,3 +49,11 @@ douyu = {
         "pgcnt": 6
     }
 }
+
+rl_list = douyu["data"]["rl"]    # 先用key做索引取出rl_list列表
+for rl in rl_list :    # 遍历列表里的每个rl(字典类型)元素
+    # 昵称
+    nn = rl['nn']      # key做索引取出rl(字典类型)元素的nn值
+    # 图片url
+    rs1 = rl['rs1']
+    print(nn,rs1)

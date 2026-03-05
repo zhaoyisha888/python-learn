@@ -3,26 +3,56 @@
 dic = {"k1": "v1", "k2": "v2", "k3": "v3"}
 
 # a.遍历字典 dic 中所有的key
-# b.遍历字典 dic 中所有的value
-# c.循环遍历字典 dic 中所有的key和value
-# d.添加一个键值对"k4","v4",输出添加后的字典 dic
-# e.删除字典 dic 中的键值对"k1","v1",并输出删除后的字典 dic
+for k in dic:
+    print(k)
 
+# b.遍历字典 dic 中所有的value
+for v in dic.values():
+    print(v)
+
+# c.循环遍历字典 dic 中所有的key和value
+for k,v in dic.items():
+    print(k,v)
+
+# d.添加一个键值对"k4","v4",输出添加后的字典 dic
+dic["k4"] = "v4"
+print(dic)
+
+# e.删除字典 dic 中的键值对"k1","v1",并输出删除后的字典 dic
+dic.pop("k1")
+print(dic)
 
 # 2. 去除列表中成绩小于70的字典
-# dict_list = [{"科目":"政治", "成绩":98},
-#              {"科目":"语文", "成绩":77},
-#              {"科目":"数学", "成绩":99},
-#              {"科目":"历史", "成绩":65}]
-
+dict_list = [{"科目":"政治", "成绩":98},
+             {"科目":"语文", "成绩":77},
+             {"科目":"数学", "成绩":99},
+             {"科目":"历史", "成绩":65}]
+dict_list2 = []
+for dic in dict_list:
+    if dic["成绩"] < 70:
+        dict_list.remove(dic)
+    else:
+        dict_list2.append(dic)
+print(list(dict_list), list(dict_list2), sep="\n")    
+'''
+[{'科目': '政治', '成绩': 98}, {'科目': '语文', '成绩': 77}, {'科目': '数学', '成绩': 99}]
+[{'科目': '政治', '成绩': 98}, {'科目': '语文', '成绩': 77}, {'科目': '数学', '成绩': 99}]
+'''
 
 
 # 3.已知字典 d2 = {'k1':"v1", 'a':"b"}
 #   编写程序，使得d2 = {'k1':"v1", 'k2':"v2", 'k3':"v3", 'a':"b"}
+d2 = {'k1':"v1", 'a':"b"}
+for i in range(2, 4):
+    d2["k" + str(i)] = "v" + str(i)   # {'k1': 'v1', 'a': 'b', 'k2': 'v2', 'k3': 'v3'} 无序的
+print(d2)
+# d2.pop("a")
+# d2.update({"k2": "v2", "k3": "v3", "a": "b"})
+# print(d2)
 
 
 # 4.已知我的电话簿里头有以下联系人，现在输入人名，查询他的号码，
-#   如果人名存在，则输出电话号码，如果该人不存在，返回"not found"
+#   如果人名存在，则输出电话号码，如果该人不存在，返回"not found"，get()方法有返回
 address_dict = {'mayun': '13309283335',
                 'zhaolong': '18989227822',
                 'zhangmin': '13382398921',
@@ -30,10 +60,10 @@ address_dict = {'mayun': '13309283335',
                 'Jordan': '18807317878',
                 'Curry': '15093488129',
                 'Wade': '19282937665'}
-'''
+
 name = input('请输入姓名:')
 print(address_dict.get(name, 'not found'))
-'''
+
 
 
 # 5.已知列表 numlist = [23,5,56,7,78,89,12,45,6,8,89,100,99],
@@ -41,5 +71,15 @@ print(address_dict.get(name, 'not found'))
 #            将小于等于66的数字保存在字典的第二个key中
 # 结果为： { 'key1': [78, 89, 89, 100, 99],
 #          'key2': [23, 5, 56, 7, 12, 45, 6, 8]}
-
-
+numlist = [23,5,56,7,78,89,12,45,6,8,89,100,99]
+key1 = []
+key2 = []
+dict1 = {}
+for i in numlist:
+    if i > 66:
+        key1.append(i)
+    else:
+        key2.append(i)
+dict1["key1"] = key1
+dict1["key2"] = key2
+print(dict1)
