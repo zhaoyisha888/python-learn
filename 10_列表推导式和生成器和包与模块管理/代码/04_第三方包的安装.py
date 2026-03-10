@@ -1,4 +1,7 @@
 
+# 1. python内部提供的包或模块（官方）
+# 2. 自己写的包或者模块（自己的）
+# 3. 别人写的包或者模块（第三方包的安装）
 
 # 安装第三方包
 #  1.在pycharm的settings中去安装
@@ -9,7 +12,8 @@
 #       pip show numpy  查看包详情
 #       pip list  查看所有包
 #       pip  freeze  查看你自己安装的包(==版本号)
-#       pip  freeze  >  requirements.txt  将当前环境中的包导出到文件requirements.txt中
+
+#       pip  freeze  >  requirements.txt  将当前环境中的包导出到文件requirements.txt中(包的迁移)
 #       pip  install  -r  requirements.txt  安装 requirements.txt 文件中的包
 
 #    如果安装很慢,我们要尝试更换镜像:
