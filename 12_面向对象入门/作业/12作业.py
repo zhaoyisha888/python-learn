@@ -1,5 +1,3 @@
-from tkinter.font import names
-
 
 # 利用面向对象的思想写下面的程序：直接赋值
 
