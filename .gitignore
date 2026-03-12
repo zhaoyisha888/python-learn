@@ -1,8 +1,18 @@
 # 忽略文件
 .idea/*
+**/.idea/* 
 
 # Python 编译文件
 *.pyc
 *.pyo
 *.pyd
 __pycache__/
+**/__pycache__/**
+
+# 保留特定路径下的虚拟环境
+# !15_虚拟环境/test_venv/.venv/
+# !15_虚拟环境/test_venv/.venv/**
+# !15_虚拟环境/project_venv/.venv/
+# !15_虚拟环境/project_venv/.venv/**
+# !15_虚拟环境/project_venv/.cmd_venv/
+# !15_虚拟环境/project_venv/.cmd_venv/**
